@@ -13,5 +13,47 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Peso" type="number" [(ngModel)]="peso"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input label="Altura" type="number" [(ngModel)]="altura"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" (click)="mostrar()">Calcular</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item color="dark">
+            IMC
+          </ion-item>
+          <ion-item>
+            Obesidade grau III
+          </ion-item>
+          <ion-item>
+            Obesidade grau II
+          </ion-item>
+          <ion-item>
+            Obesidade grau I
+          </ion-item>
+          <ion-item>
+            Sobrepeso
+          </ion-item>
+          <ion-item>
+            Normal
+          </ion-item>
+          <ion-item>
+            Abaixo do normal
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
