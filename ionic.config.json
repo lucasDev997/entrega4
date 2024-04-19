@@ -1,0 +1,7 @@
+{
+  "name": "entrega4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
