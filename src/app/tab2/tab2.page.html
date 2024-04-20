@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Calculadora de IMC
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -24,36 +24,91 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button color="danger" (click)="mostrar()">Calcular</ion-button>
+        <ion-button color="danger" (click)="initializer()">Calcular</ion-button>
       </ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col>
-        <ion-list>
-          <ion-item color="dark">
-            IMC
-          </ion-item>
-          <ion-item>
-            Obesidade grau III
-          </ion-item>
-          <ion-item>
-            Obesidade grau II
-          </ion-item>
-          <ion-item>
-            Obesidade grau I
-          </ion-item>
-          <ion-item>
-            Sobrepeso
-          </ion-item>
-          <ion-item>
-            Normal
-          </ion-item>
-          <ion-item>
-            Abaixo do normal
-          </ion-item>
-        </ion-list>
+        <ion-button color="warning" (click)="limparCampos()">Limpar</ion-button>
       </ion-col>
     </ion-row>
+    <div class="resultadoHidden" #RES>
+      <ion-row>
+        <ion-col>
+          <ion-input label="Resultado" #RESINPUT [(ngModel)]="resultado" readonly="true"></ion-input>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-grid>
+      <div class="cabecalho">
+        <ion-row>
+          <ion-col>
+            <ion-text color="light">Classificação</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="light">IMC</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #ON3>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Obesidade Nivel III</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark">≥ 40</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #ON2>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Obesidade Nivel II</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark">35,0 - 39,9</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #ON1>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Obesidade Nivel I</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark">30,0 - 34,9</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #SPS>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Sobrepeso</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark">25,0 - 29,9</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #NML>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Peso Normal</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark">18,5 - 24,9</ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="corpo" #PBX>
+        <ion-row>
+          <ion-col>
+            <ion-text color="dark">Peso Baixo</ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text color="dark"> ≤ 18,4 </ion-text>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
   </ion-grid>
 
 </ion-content>
