@@ -44,22 +44,16 @@ export class Tab2Page {
 
   private selecionarClassificacao(resultado: number):void{
     if(resultado >= 40){
-      console.log("Você tá fudido, tua alma tá na mão do capeta")
       this.obesidadeIII.nativeElement.classList.add("select")
     }else if(resultado < 40 && resultado >= 35){
-      console.log("Você tá gordo pra caralho, teu corpo tá na mão capeta")
       this.obesidadeII.nativeElement.classList.add("select")
     }else if(resultado < 35 && resultado >= 30){
       this.obesidadeI.nativeElement.classList.add("select")
-      console.log("Tá gordo, aproveita e come mais, tu tá dando o braço pro capeta")
     }else if(resultado < 30 && resultado >= 25){
       this.sobrepeso.nativeElement.classList.add("select")
-      console.log("Tá gordinho, você deu a mão para o capeta, continue assim.")
     }else if(resultado < 25 && resultado >= 18.5){
       this.normal.nativeElement.classList.add("select")      
-      console.log("Tá gordo não, tua alma tá na mão de Jesus")
     }else if(resultado < 18.5){
-      console.log("Você é africano, Etíope? Tá cumendo barro?")
       this.pesoBaixo.nativeElement.classList.add("select")
     }
 
@@ -73,7 +67,7 @@ export class Tab2Page {
     }
   }
 
-  private limparTabela(){
+  private limparTabela():void{
     this.obesidadeIII.nativeElement.classList.remove("select")
     this.obesidadeII.nativeElement.classList.remove("select")
     this.obesidadeI.nativeElement.classList.remove("select")
@@ -82,22 +76,12 @@ export class Tab2Page {
     this.pesoBaixo.nativeElement.classList.remove("select")
   }
 
-  public initializer(){
+  public initializer():void{
     let result = this.calcularIMC().toFixed(2)
     this.resultado = Number(result)
 
     this.mostrarResultado(this.resultado)
     this.limparTabela()
     this.selecionarClassificacao(this.resultado)
-    
-    
-       
   }
-
-
-
-
-
-
-
 }
