@@ -9,17 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Calculadora IMC</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-input label="Peso" type="number" [(ngModel)]="peso"></ion-input>
+        <ion-input label="Peso" type="number" inputmode="numeric" [(ngModel)]="peso"></ion-input>
       </ion-col>
       <ion-col>
-        <ion-input label="Altura" type="number" [(ngModel)]="altura"></ion-input>
+        <ion-input label="Altura" type="number" inputmode="numeric" [(ngModel)]="altura"></ion-input>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -41,10 +41,10 @@
       <div class="cabecalho">
         <ion-row>
           <ion-col>
-            <ion-text color="light">Classificação</ion-text>
+            <ion-text color="dark">Classificação</ion-text>
           </ion-col>
           <ion-col>
-            <ion-text color="light">IMC</ion-text>
+            <ion-text color="dark">IMC</ion-text>
           </ion-col>
         </ion-row>
       </div>

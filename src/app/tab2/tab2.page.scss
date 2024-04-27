@@ -3,11 +3,19 @@
 }
 
 .cabecalho{
-    background-color: rgba($color: #353535, $alpha: 1.0);
-    border-radius: 5px;
+    background-color: rgba($color: #9a9a9a, $alpha: 1.0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
 }
 .corpo{
     background-color: rgba($color: #c9c9c9, $alpha: 1.0);
+}
+
+.corpo:last-child{
+    background-color: rgba($color: #c9c9c9, $alpha: 1.0);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 .select{
